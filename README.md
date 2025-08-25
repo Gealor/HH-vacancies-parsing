@@ -2,3 +2,6 @@
 
 API hh.ru: https://api.hh.ru/openapi/redoc#tag/Poisk-vakansij/operation/get-vacancies
 
+# Первый запуск
+1. Создайте файл .env в корневой папке проекта, все необходимые переменные вы можете увидеть в файле .env.example
+2. Запустите скрипт main.py
