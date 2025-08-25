@@ -1,0 +1,21 @@
+[project]
+name = "hh-vacancies-parsing"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gealor",email = "gzazulya@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp (>=3.12.15,<4.0.0)",
+    "orjson (>=3.11.2,<4.0.0)",
+    "pydantic (>=2.11.7,<3.0.0)",
+    "pydantic-settings (>=2.10.1,<3.0.0)",
+    "ruff (>=0.12.10,<0.13.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
