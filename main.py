@@ -9,6 +9,7 @@ import orjson
 from decorators import time_meter_decorator, write_into_file
 from models import VacancyData
 
+
 logging.basicConfig(
         level=logging.INFO, 
         format=settings.LOG_FORMAT,
@@ -48,6 +49,7 @@ def parse_items(items: list[dict]) -> list[dict]:
     log.info("Validated %d items", len(result_items))
     return result_items
 
+
 def create_page_dict(page: int, items: list[VacancyData]):
     return {
         "page": page,
@@ -59,7 +61,7 @@ async def get_all_vacancies(
     aiohttp_client: aiohttp.ClientSession,
 ):
     page = 0
-    max_page = 2000 // settings.PER_PAGE
+    max_page = settings.MAX_ELEMS // settings.PER_PAGE
     
     result_list = []
     while True:

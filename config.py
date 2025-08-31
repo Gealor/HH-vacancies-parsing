@@ -17,6 +17,8 @@ class Settings(BaseSettings):
 
     FILEPATH: Path = Path(__file__).parent / 'data' / 'vacancies_data.json'
 
+    MAX_ELEMS: int = 2000
+
     @property
     def url_get_vacancies(self):
         return urljoin(self.URL_HH_BASE, self.URL_HH_VACANCIES)
